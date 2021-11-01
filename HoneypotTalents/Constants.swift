@@ -9,4 +9,6 @@ import Foundation
 
 struct K {
     static let segueToSignIn = "RegisterToSignIn"
+    static let segueToMain = "SignInToMain"
+    static let goToProfile = "GoToProfile"
 }

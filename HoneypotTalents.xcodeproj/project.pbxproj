@@ -21,6 +21,8 @@
 		B3D1F26B272C418400A2CC02 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B3D1F26A272C418400A2CC02 /* FirebaseInAppMessagingSwift-Beta */; };
 		B3D1F26D272C418400A2CC02 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B3D1F26C272C418400A2CC02 /* FirebaseMessaging */; };
 		B3D1F26F272C7F3200A2CC02 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1F26E272C7F3200A2CC02 /* Constants.swift */; };
+		B3D1F273272C8B6E00A2CC02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1F272272C8B6E00A2CC02 /* MainViewController.swift */; };
+		B3D1F275272C935200A2CC02 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1F274272C935200A2CC02 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		B3D1F25F272C3EC900A2CC02 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B3D1F263272C404E00A2CC02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3D1F26E272C7F3200A2CC02 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B3D1F272272C8B6E00A2CC02 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B3D1F274272C935200A2CC02 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				B3D1F248272C374900A2CC02 /* ViewController.swift */,
 				B3D1F25D272C3EB600A2CC02 /* RegisterViewController.swift */,
 				B3D1F25F272C3EC900A2CC02 /* SignInViewController.swift */,
+				B3D1F272272C8B6E00A2CC02 /* MainViewController.swift */,
+				B3D1F274272C935200A2CC02 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,11 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D1F273272C8B6E00A2CC02 /* MainViewController.swift in Sources */,
 				B3D1F249272C374900A2CC02 /* ViewController.swift in Sources */,
 				B3D1F245272C374900A2CC02 /* AppDelegate.swift in Sources */,
 				B3D1F247272C374900A2CC02 /* SceneDelegate.swift in Sources */,
 				B3D1F260272C3EC900A2CC02 /* SignInViewController.swift in Sources */,
 				B3D1F25E272C3EB600A2CC02 /* RegisterViewController.swift in Sources */,
+				B3D1F275272C935200A2CC02 /* ProfileViewController.swift in Sources */,
 				B3D1F26F272C7F3200A2CC02 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
