@@ -11,4 +11,5 @@ struct K {
     static let segueToSignIn = "RegisterToSignIn"
     static let segueToMain = "SignInToMain"
     static let goToProfile = "GoToProfile"
+    static let loggedIn = "LoggedIn"
 }

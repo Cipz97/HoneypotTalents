@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: K.loggedIn, sender: self)
+        }
     }
 
 
