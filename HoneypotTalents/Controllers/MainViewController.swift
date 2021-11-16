@@ -18,7 +18,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
-    
+    //logs out user
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
         do {
@@ -28,20 +28,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("Error signing out: %@", signOutError)
         }
     }
+    //On click user gets sent to profile page
     @IBAction func profileButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: K.goToProfile, sender: self)
     }
     
-    
+    //TableView amount of conversations
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+    //cell for TableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath)
         cell.textLabel?.text = "Test"
         cell.accessoryType = .disclosureIndicator
         return cell
     }
+    //selecting TableView row shows you detailed chat with contact
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = ChatViewController()

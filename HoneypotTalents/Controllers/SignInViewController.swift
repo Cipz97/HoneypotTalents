@@ -29,6 +29,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 if let error = error {
                     self.passwordTextField.text = "\(error.localizedDescription)"
                 } else {
+                    UserDefaults.standard.set(email, forKey: "email")
                     self.performSegue(withIdentifier: K.segueToMain, sender: self)
                 }
             }

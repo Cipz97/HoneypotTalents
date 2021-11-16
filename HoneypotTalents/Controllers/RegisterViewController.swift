@@ -35,7 +35,23 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         print(error)
                         self.passwordTextfield.placeholder = "\(error.localizedDescription)"
                     } else {
-                        DatabaseManager.shared.addUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAdrdress: email))
+                        let chatUser = ChatAppUser(firstName: firstName, lastName: lastName, emailAdrdress: email)
+                        DatabaseManager.shared.addUser(with: chatUser) { done in
+                            if done {
+                                guard let image = self.imageView.image, let data = image.pngData() else {
+                                    return
+                                }
+                                let fileName = chatUser.profilePictureFileName
+                                StorageManager.sharedStorage.uploadProfilePicture(with: data, fileName: fileName) { result in
+                                    switch result {
+                                        case .success(let downloadUrl):
+                                            UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                        case .failure(let error):
+                                            print(error)
+                                    }
+                                }
+                            }
+                        }
                         self.performSegue(withIdentifier: K.segueToSignIn, sender: self)
                     }
                 }

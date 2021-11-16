@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SwiftUI
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -62,6 +63,35 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
+    }
+    
+    func getProfilePicture() {
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        let safeEmail = DatabaseManager.safeEmail(with: email)
+        let fileName = safeEmail + "_profile_picture.png"
+        let path = "images/" + fileName
+        StorageManager.sharedStorage.downloadURL(for: path) { result in
+            switch result {
+                case .success(let url):
+                    self.downloadImage(url: url)
+                case .failure(let error):
+                    print(error)
+            }
+        }
+    }
+    func downloadImage(url: URL) {
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                self.imageView.image = image
+            }
+            
+        }.resume()
     }
     
 }

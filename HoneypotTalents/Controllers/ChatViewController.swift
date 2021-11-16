@@ -35,7 +35,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
     }
 
 }
-
+//Message Datatypes for MessageKit
 struct Message: MessageType {
     var sender: SenderType
     var messageId: String

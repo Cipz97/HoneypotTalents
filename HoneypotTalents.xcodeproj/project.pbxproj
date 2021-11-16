@@ -22,6 +22,7 @@
 		B32A7B122731DDF3007BCF11 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B32A7B112731DDF3007BCF11 /* RealmSwift */; };
 		B32A7B142731E124007BCF11 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A7B132731E124007BCF11 /* ChatViewController.swift */; };
 		B32A7B162731E769007BCF11 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A7B152731E769007BCF11 /* NewChatViewController.swift */; };
+		B369359F2743C4C100D60B05 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369359E2743C4C100D60B05 /* StoreManager.swift */; };
 		B3D1F245272C374900A2CC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1F244272C374900A2CC02 /* AppDelegate.swift */; };
 		B3D1F247272C374900A2CC02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1F246272C374900A2CC02 /* SceneDelegate.swift */; };
 		B3D1F249272C374900A2CC02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1F248272C374900A2CC02 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		B32A7B032731D242007BCF11 /* ChatAppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUser.swift; sourceTree = "<group>"; };
 		B32A7B132731E124007BCF11 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B32A7B152731E769007BCF11 /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		B369359E2743C4C100D60B05 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		B3D1F241272C374900A2CC02 /* HoneypotTalents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneypotTalents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D1F244272C374900A2CC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3D1F246272C374900A2CC02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				B3D1F252272C374B00A2CC02 /* Info.plist */,
 				B3D1F263272C404E00A2CC02 /* GoogleService-Info.plist */,
 				B3DF03FE273029570036FE1E /* DatabaseManager.swift */,
+				B369359E2743C4C100D60B05 /* StoreManager.swift */,
 				B3D1F26E272C7F3200A2CC02 /* Constants.swift */,
 			);
 			path = HoneypotTalents;
@@ -238,6 +241,7 @@
 				B3D1F247272C374900A2CC02 /* SceneDelegate.swift in Sources */,
 				B3D1F260272C3EC900A2CC02 /* SignInViewController.swift in Sources */,
 				B32A7B162731E769007BCF11 /* NewChatViewController.swift in Sources */,
+				B369359F2743C4C100D60B05 /* StoreManager.swift in Sources */,
 				B3D1F25E272C3EB600A2CC02 /* RegisterViewController.swift in Sources */,
 				B3D1F275272C935200A2CC02 /* ProfileViewController.swift in Sources */,
 				B3D1F26F272C7F3200A2CC02 /* Constants.swift in Sources */,
