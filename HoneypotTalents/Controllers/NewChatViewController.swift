@@ -37,13 +37,14 @@ class NewChatViewController: UIViewController, UISearchBarDelegate, UITableViewD
         guard let text = searchBar.text, !text.isEmpty else {
             return
         }
+        searchBar.resignFirstResponder()
         results.removeAll()
         self.searchUsers(query: text)
         
     }
     func searchUsers(query: String) {
         if hasFetched {
-            
+            filterUsers(with: query)
         } else {
             DatabaseManager.shared.getAllUsers { result in
                 switch result {
